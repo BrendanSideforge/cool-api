@@ -1,0 +1,150 @@
+
+server:
+  port: 3001
+  host: 'localhost'
+  api_path: 'api'
+  url_encoded: true
+  cors: {
+    origin: '*'
+  }
+  
+  prod_links: 
+    api: 'https://viralthumbs.com'
+
+  logs:
+    service_logs: true
+    error_logs: true
+    actions_logs: true
+    connections_logs: true
+    svelte_logs: true
+    stripe_logs: true
+
+  ratelimit:
+
+    default:
+      duration: 600000 # 10 minutes
+      max_requests: 30
+      allowed_ips: [
+        '127.0.0.1', # localhost server
+        '165.22.184.142' # prod server
+      ]
+      allowed_hosts: [
+        "viralthumbs.com",
+        "localhost"
+      ]
+
+
+proxy:
+
+  port: 3002
+  host: 'localhost'
+  
+  logs:
+    proxy_logs: true
+
+database:
+  dev:
+    user: 'postgres'
+    host: 'localhost'
+    port: 5432
+    database: 'viralthumbs'
+    password: 'BS103261'
+  
+  prod:
+    user: 'postgres'
+    host: 'postgres'
+    port: 5432
+    database: 'viralthumbs'
+    password: 'BS103261'
+
+redis:
+  dev:
+    port: 6379
+    host: localhost
+    url: null # only if there is a url that you want to connect to
+  
+  prod:
+    port: 6379
+    host: redis
+    url: null # only if there is a url you want to connect to
+
+stripe:
+
+  # cli version (not in config) personal note
+  # easy-prize-ardent-tops
+
+  # configs 
+  configs: {
+    apiVersion: '2023-08-16'
+  }
+
+
+  # in usd
+  subscriptions: [
+  
+    {
+
+      type: 0, # monthly
+      price: 7.00, # usd
+      credits: 1000,
+      portal_link: 'https://',
+      type_name: 'monthly-premium',
+      promise: '7 day money back guarantee',
+      pros: [
+        'Generate Thumbnails',
+        '2 Custom Assets',
+        'Ad Free Workspace',
+        'Premium Templates',
+        'Thumbnail Editor'
+      ],
+      cons: [
+        'Custom Template Maker',
+        'Advanced Editor Features'
+      ]
+
+    },
+    {
+
+      type: 1, # annually
+      price: 60.00, # usd
+      monthly_price: 5.00, # usd,
+      credits: 12000,
+      portal_link: 'https://',
+      type_name: 'annual-premium',
+      promise: '7 day money back guarantee',
+      pros: [
+        'Generate Thumbnails',
+        '2 Custom Assets',
+        'Ad Free Workspace',
+        'Premium Templates',
+        'Thumbnail Editor'
+      ],
+      cons: [
+        'Custom Template Maker',
+        'Advanced Editor Features'
+      ]
+
+    }
+
+  ]
+
+
+  # portal links
+  test_links: [
+    'https://buy.stripe.com/test_fZecMP2c78Jq3gk4gg', # tier 1 test,
+  ]
+  prod_links: [
+    'https://buy.stripe.com/test_fZecMP2c78Jq3gk4gg' # tier 1 
+  ]
+
+  default_credits: 30
+  credits_per_dollar: 100
+
+# supabase
+
+# custom cache checkers
+cache_timers:
+
+  stripe_check:
+    duration: 30 # seconds
+    identifier: 'stripe-check'
