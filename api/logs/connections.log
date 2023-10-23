@@ -1,0 +1,6 @@
+[10/15/2023 11:38:53 AM] [CONNECTIONS] Request from 127.0.0.1 on /api/stripe/customer/brendansides12@gmail.com (29/30 remaining request(s) until RATE LIMIT)
+[10/15/2023 11:38:53 AM] [CONNECTIONS] Request from 127.0.0.1 on /api/stripe/customer/invoices/brendansides12@gmail.com (28/30 remaining request(s) until RATE LIMIT)
+[10/15/2023 11:38:55 AM] [CONNECTIONS] Request from 127.0.0.1 on /api/stripe/customer/brendansides12@gmail.com (27/30 remaining request(s) until RATE LIMIT)
+[10/15/2023 11:38:55 AM] [CONNECTIONS] Request from 127.0.0.1 on /api/stripe/customer/invoices/brendansides12@gmail.com (26/30 remaining request(s) until RATE LIMIT)
+[10/15/2023 11:39:01 AM] [CONNECTIONS] Request from 127.0.0.1 on /api/stripe/customer/brendansides12@gmail.com (25/30 remaining request(s) until RATE LIMIT)
+[10/15/2023 11:39:01 AM] [CONNECTIONS] Request from 127.0.0.1 on /api/stripe/customer/invoices/brendansides12@gmail.com (24/30 remaining request(s) until RATE LIMIT)

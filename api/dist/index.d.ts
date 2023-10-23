@@ -1,0 +1,13 @@
+import express from "express";
+import * as pg from "pg";
+import * as Redis from "redis";
+import { CacheTimerGroup } from "./utils/CacheTimer";
+import { Stripe } from "stripe";
+import { SubscriptionGroup } from "./utils/Subscriptions";
+export declare const app: express.Application;
+export declare const config: object | any;
+export declare const pool: pg.Pool;
+export declare const redis: Redis.Client;
+export declare const stripe: Stripe;
+export declare const subscriptions: SubscriptionGroup;
+export declare const cached_timers: CacheTimerGroup;

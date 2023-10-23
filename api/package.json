@@ -1,0 +1,33 @@
+{
+    "name": "viralthumbs",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "tsc && node dist/index.js prod",
+        "dev": "tsc && node dist/index.js dev"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@supabase/supabase-js": "^2.33.2",
+        "@types/node": "^20.4.10",
+        "@types/stripe": "^8.0.417",
+        "axios": "^1.5.0",
+        "body-parser": "^1.20.2",
+        "chalk": "^4.1.2",
+        "cors": "^2.8.5",
+        "express": "^4.18.2",
+        "express-rate-limit": "^6.9.0",
+        "js-yaml": "^4.1.0",
+        "pg": "^8.11.2",
+        "rate-limit-redis": "^3.0.2",
+        "redis": "^3.1.2",
+        "stripe": "^13.5.0",
+        "tslib": "^2.6.1",
+        "typescript": "^5.1.6"
+    }
+}
